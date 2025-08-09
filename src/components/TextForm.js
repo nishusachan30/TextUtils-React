@@ -59,7 +59,7 @@ function TextForm(props) {
         <>
             <div className='container' style={{ color: props.mode === "dark" ? "white" : "black" }}>
                 <h2 >{props.heading}</h2>
-                <div class="mb-3" >
+                <div className="mb-3" >
                     <textarea className="form-control" value={text} onChange={handleOnChange} 
                     style={{backgroundColor: props.mode === 'dark' ? '#434040' : 'white', 
                             color: props.mode === 'light' ? 'black' : 'white',
@@ -67,15 +67,15 @@ function TextForm(props) {
                             borderRadius: props.mode === 'light' ? '14px' : '14px' }} 
                         id="myBox" rows="6"></textarea>
                 </div>
-                <button className="btn btn-primary mr-2 mb-1" onClick={upperCase}>Uppercase</button>
-                <button className="btn btn-primary mr-2 mb-1" onClick={lowerCase}>Lowercase</button>
-                <button className="btn btn-primary mr-2 mb-1" onClick={copy}>Copy</button>
-                <button className="btn btn-primary mr-2 mb-1" onClick={removeExtraSpaces}>Remove Extra Spaces</button>
-                <button className="btn btn-primary mr-2 mb-1" onClick={removeNumbers}>Remove Numbers</button>
-                <button className="btn btn-primary mr-2 mb-1" onClick={removePunctuation}>Remove Punctuation</button>
-                <button className="btn btn-primary mr-2 mb-1" onClick={reverseText}>Reverse Text</button>
-                <button className="btn btn-primary mr-2 mb-1" onClick={capitalizeWords}>Capitalize Words</button>
-                <button className="btn btn-primary mr-2 mb-1" onClick={clearText}>Clear</button>
+                <button disabled={text.length===0} className="btn btn-primary mr-2 mb-1" onClick={upperCase}>Uppercase</button>
+                <button disabled={text.length===0} className="btn btn-primary mr-2 mb-1" onClick={lowerCase}>Lowercase</button>
+                <button disabled={text.length===0} className="btn btn-primary mr-2 mb-1" onClick={copy}>Copy</button>
+                <button disabled={text.length===0} className="btn btn-primary mr-2 mb-1" onClick={removeExtraSpaces}>Remove Extra Spaces</button>
+                <button disabled={text.length===0} className="btn btn-primary mr-2 mb-1" onClick={removeNumbers}>Remove Numbers</button>
+                <button disabled={text.length===0} className="btn btn-primary mr-2 mb-1" onClick={removePunctuation}>Remove Punctuation</button>
+                <button disabled={text.length===0} className="btn btn-primary mr-2 mb-1" onClick={reverseText}>Reverse Text</button>
+                <button disabled={text.length===0} className="btn btn-primary mr-2 mb-1" onClick={capitalizeWords}>Capitalize Words</button>
+                <button disabled={text.length===0} className="btn btn-primary mr-2 mb-1" onClick={clearText}>Clear</button>
             </div>
             <div className="container my-4" style={{ color: props.mode === "dark" ? "white" : "black" }}>
                 <h3>Text Summary</h3>
