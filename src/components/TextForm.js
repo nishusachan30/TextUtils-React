@@ -67,7 +67,7 @@ function TextForm(props) {
                             borderRadius: props.mode === 'light' ? '14px' : '14px' }} 
                         id="myBox" rows="6"></textarea>
                 </div>
-                <button disabled={text.length===0} className="btn btn-primary mr-2 mb-1" onClick={upperCase}>Uppercase</button>
+                <button disabled={text.length===0} className="btn btn-primary mr-2 mb-1" onClick={upperCase}>Uppeercase</button>
                 <button disabled={text.length===0} className="btn btn-primary mr-2 mb-1" onClick={lowerCase}>Lowercase</button>
                 <button disabled={text.length===0} className="btn btn-primary mr-2 mb-1" onClick={copy}>Copy</button>
                 <button disabled={text.length===0} className="btn btn-primary mr-2 mb-1" onClick={removeExtraSpaces}>Remove Extra Spaces</button>
